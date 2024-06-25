@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>catatan Salman</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1">Catatan Ku</span>
+  </nav>
+</header>
+
+<!-- Catatan Pengantar -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-info slide-in-top" role="alert">
+        <h4 class="alert-heading">Selamat datang di Note App!</h4>
+        <p>Dengan aplikasi ini, Anda dapat dengan mudah mencatat dan mengatur semua hal penting dalam hidup Anda.</p>
+        <hr>
+        <p class="mb-0">Fitur-fitur aplikasi kami mencakup: Pembuatan catatan dengan mudah dan cepat, penyusunan catatan ke dalam kategori untuk memudahkan pencarian, kemampuan untuk menambahkan lampiran seperti gambar atau file, dan aksesibilitas dari berbagai perangkat sehingga Anda dapat mengakses catatan Anda di mana pun Anda berada.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Input Catatan woi!</h5>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="inputBookTitle">Title</label>
+            <input id="inputBookTitle" type="text" class="form-control" placeholder="Judul Buku">
+          </div>
+          <div class="form-group">
+            <label for="inputBookAuthor">Body</label>
+            <input id="inputBookAuthor" type="text" class="form-control" placeholder="Pengarang">
+          </div>
+          <div class="form-group">
+            <button id="buttonSave" class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="listBook" class="row">
+    <!-- Loader ditambahkan di sini -->
+    <div class="loader"></div>
+    <!-- Custom Element 1: Item Catatan -->
+    <!-- Tidak digunakan di sini -->
+    <!-- Custom Element 2: App Bar -->
+    <notification-message></notification-message>
+    <!-- Custom Element 3: Input Catatan -->
+    <input-catatan></input-catatan>
+    <!-- Custom Element 4: Daftar Catatan -->
+    <daftar-catatan></daftar-catatan>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center">Note APP Ku Seluruh Alam. Hak Cipta &copy; 2024 Salman</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Load JavaScript file -->
+<script src="src/scripts/main.js"></script>
+
+</body>
+</html>

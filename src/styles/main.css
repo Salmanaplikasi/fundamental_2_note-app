@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+ 
+#container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+ 
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+ 
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #0056b3;
+}
+ 
+.note {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+ 
+#archivedNotes {
+  color: #888;
+}
+ 
+/* Custom Note App Styles */
+.container {
+  margin-top: 20px;
+}
+ 
+.card {
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 
+.button-delete {
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+ 
+.button-delete:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #ff5f6d; /* Merah Muda */
+}
+ 
+.title-container:hover .title {
+  color: #ff5f6d; /* Merah Muda */
+}
+ 
+/* Loader Styles */
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+ 
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+ 
+.loader:before {
+  top: 5px;
+  left: 5px;
+  width: 70px;
+  height: 70px;
+  border: 8px solid #3498db; /* Biru */
+  border-top-color: transparent;
+  animation: spin-reverse 2s linear infinite;
+}
+ 
+.loader:after {
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border: 8px solid #9b59b6; /* Ungu */
+  border-top-color: transparent;
+  animation: spin 1.5s linear infinite;
+}
+ 
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes spin-reverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Animasi untuk slide-in dari atas */
+.slide-in-top {
+  animation: slideInTop 2s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
